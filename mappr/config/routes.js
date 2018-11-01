@@ -17,6 +17,7 @@ module.exports.routes = {
   'GET /':                   { action: 'view-homepage-or-redirect' },
   'GET /welcome':            { action: 'dashboard/view-welcome' },
 
+  'GET /list':               { view:   'pages/list' },
   'GET /faq':                { view:   'pages/faq' },
   'GET /legal/terms':        { view:   'pages/legal/terms' },
   'GET /legal/privacy':      { view:   'pages/legal/privacy' },
@@ -33,7 +34,7 @@ module.exports.routes = {
   'GET /account':            { action: 'account/view-account-overview' },
   'GET /account/password':   { action: 'account/view-edit-password' },
   'GET /account/profile':    { action: 'account/view-edit-profile' },
-  'GET /upload':             { view:   'pages/upload/upload'},
+ // 'GET /upload':             { view:   'pages/upload/upload'},
 
 
   //  ╔═╗╔═╗╦  ╔═╗╔╗╔╔╦╗╔═╗╔═╗╦╔╗╔╔╦╗╔═╗

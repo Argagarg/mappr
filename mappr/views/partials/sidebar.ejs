@@ -1,0 +1,98 @@
+<div id="sidebar" class='col-md-4'>
+  <h1>This is the sidebar</h1>
+  <div id='searchtab'>
+    <div class="upload-form">
+      <hr />
+      <ajax-form action="search" :syncing.sync="syncing" :cloud-error.sync="cloudError" @submitted="submittedForm()"
+        :handle-parsing="handleParsingForm">
+        <div class="form-group">
+          <p>Search for a room or dungeon by:</p>
+          <label for="room-name" class='sr-only'>Search for a room or dungeon by:</label>
+          <input class="form-control" id="room-name" type="text" :class="[formErrors.roomname ? 'is-invalid' : '']"
+            v-model.trim="formData.roomname" placeholder="search by name" autocomplete="" focus-first>
+          <div class="invalid-feedback" v-if="formErrors.roomname">Please enter a valid room or dungeon name.</div>
+        </div>
+        <div class="form-group">
+          <p>Search by size:</p>
+          <div class='input-group'>
+            <label for="room-min-width" class='sr-only'>Min Width</label>
+            <input class="form-control" id="room-min-width" type="number" :class="[formErrors.roomminwidth ? 'is-invalid' : '']"
+              v-model.trim="formData.roomminwidth" placeholder="0">
+            <div class="invalid-feedback" v-if="formErrors.roomminwidth">Please enter a valid room width.</div>
+            <div class='spacing'>&ndash;</div>
+            <label for="room-max-width" class='sr-only'>Max Width</label>
+            <input class="form-control" id="room-max-width" type="number" :class="[formErrors.roommaxwidth ? 'is-invalid' : '']"
+              v-model.trim="formData.roommaxwidth" placeholder="0">
+            <div class='spacing'></div>
+            <label for="room-width-units" class='sr-only'>Width Units</label>
+            <select name="room-width-units" class="form-control">
+              <option value="units">Units</option>
+              <option value="ft">Feet</option>
+              <option value="m">Meters</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class='input-group'>
+            <label for="room-min-height" class='sr-only'>Min Height</label>
+            <input class="form-control" id="room-min-height" type="number" :class="[formErrors.roomminheight ? 'is-invalid' : '']"
+              v-model.trim="formData.roomminheight" placeholder="0">
+            <div class="invalid-feedback" v-if="formErrors.roomminheight">Please enter a valid room width.</div>
+            <p class='spacing'>&ndash;</p>
+            <label for="room-max-height" class='sr-only'>Max Height</label>
+            <input class="form-control" id="room-max-height" type="number" :class="[formErrors.roommaxheight ? 'is-invalid' : '']"
+              v-model.trim="formData.roommaxheight" placeholder="0">
+            <div class='spacing'></div>
+            <label for="room-height-units" class='sr-only'>Height Units</label>
+            <select name="room-height-units" class="form-control">
+              <option value="units">Units</option>
+              <option value="ft">Feet</option>
+              <option value="m">Meters</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <p>Filter your results by common tags:</p>
+          <label for="tags" class='sr-only'>Tags</label>
+          <input class="form-control" id="tags" type="text" :class="[formErrors.tags ? 'is-invalid' : '']" v-model.trim="formData.tags"
+            placeholder="filter by tags">
+          <div class="invalid-feedback" v-if="formErrors.tags">Please enter a tag.</div>
+        </div>
+        <div class="form-group" style="width:32%; display: inline-block;">
+          <div class='input-group'>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox">Allow Scaling?
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" style="width:33%; display: inline-block;">
+          <div class='input-group'>
+            <label for="room-entrances" class='sr-only'>Number of Entrances</label>
+            <select name="room-entrances" class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group" style="width:33%; display: inline-block;">
+          <div class='input-group'>
+            <label for="room-dungeons" class='sr-only'>Room or Dungeon?</label>
+            <select name="room-dungeon" class="form-control">
+              <option value="room">Room</option>
+              <option value="dungeon">Dungeon</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <ajax-button type="submit" :syncing="syncing" class="btn-dark btn-lg btn-block">Search</ajax-button>
+        </div>
+      </ajax-form>
+    </div>
+
+  </div>
+</div>
+</div>
