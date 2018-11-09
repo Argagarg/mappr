@@ -48,6 +48,7 @@
 config/local.js
 
 
+
 ################################################
 # Dependencies
 #
@@ -130,3 +131,6 @@ lib-cov
 *.out
 *.pid
 
+mappr/config/datastores.js
+mappr/README.md
+mappr
