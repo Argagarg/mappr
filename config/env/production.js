@@ -235,7 +235,7 @@ module.exports = {
     //   'https://staging.example.com',
     // ],
     onlyAllowOrigins: [
-      'https://mappr-5488.nodechef.com/'
+      'https://mappr-5488.nodechef.com'
     ]
 
     /***************************************************************************
