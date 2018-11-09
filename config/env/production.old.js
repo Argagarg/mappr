@@ -46,6 +46,9 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
    mongodb: {
+    // adapter: 'sails-mysql',
+    // url: 'mysql://user:password@host:port/database',
+
     adapter: 'sails-mongo',
     url: process.env.DATABASE_URL
 
@@ -78,6 +81,7 @@ module.exports = {
     * choose to keep this enabled.)                                            *
     *                                                                          *
     ***************************************************************************/
+    // cascadeOnDestroy: false,
 
   },
 
@@ -124,9 +128,9 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     cors: {
-       allowOrigins: [
-         'https://mappr-5488.nodechef.com',
-       ]
+      // allowOrigins: [
+      //   'https://example.com',
+      // ]
     },
 
   },
@@ -197,7 +201,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     cookie: {
-      secure: true,
+      // secure: true,
       maxAge: 24 * 60 * 60 * 1000,  // 24 hours
     },
 
@@ -226,6 +230,10 @@ module.exports = {
     * > Be sure to use the right protocol!  ("http://" vs. "https://")         *
     *                                                                          *
     ***************************************************************************/
+    // onlyAllowOrigins: [
+    //   'https://example.com',
+    //   'https://staging.example.com',
+    // ],
     onlyAllowOrigins: [
       'https://mappr-5488.nodechef.com'
     ]
@@ -296,6 +304,7 @@ module.exports = {
     * (https://sailsjs.com/config/http)                                        *
     *                                                                          *
     ***************************************************************************/
+    // trustProxy: true,
 
   },
 
@@ -310,6 +319,7 @@ module.exports = {
   * this, just try deploying without setting it and see if it works.)       *
   *                                                                         *
   ***************************************************************************/
+  // port: 80,
 
 
 
@@ -330,6 +340,7 @@ module.exports = {
   * > https://sailsjs.com/config/*#?sailsconfigssl                          *
   *                                                                         *
   **************************************************************************/
+  // ssl: undefined,
 
 
 
@@ -342,7 +353,7 @@ module.exports = {
   *                                                                         *
   ***************************************************************************/
   custom: {
-    baseUrl: 'https://mappr-5488.nodechef.com',
+    baseUrl: 'https://example.com',
     internalEmailAddress: 'support@example.com',
 
     // mailgunDomain: 'mg.example.com',
