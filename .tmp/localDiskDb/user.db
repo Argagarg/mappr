@@ -1,0 +1,3 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"$$indexCreated":{"fieldName":"emailAddress","unique":true,"sparse":false}}
+{"createdAt":1537467932398,"updatedAt":1537467932423,"id":1,"emailAddress":"kirk.lundblade@gmail.com","password":"$2a$10$m1x1nLIz2ATIO4/a83xTSO2fomta6YEAe7G9WCtegkeXSeF1oCv76","fullName":"Kirk M Lundblade","isSuperAdmin":false,"passwordResetToken":"","passwordResetTokenExpiresAt":0,"stripeCustomerId":"","hasBillingCard":false,"billingCardBrand":"","billingCardLast4":"","billingCardExpMonth":"","billingCardExpYear":"","emailProofToken":"","emailProofTokenExpiresAt":0,"emailStatus":"confirmed","emailChangeCandidate":"","tosAcceptedByIp":"::1","lastSeenAt":1537467932422,"_id":1}
