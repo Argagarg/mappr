@@ -12,7 +12,7 @@
  * For more information on configuring datastores, check out:
  * https://sailsjs.com/config/datastores
  */
-//const dbloc = process.env.DATABASE_URL;
+
 module.exports.datastores = {
 
 
@@ -53,7 +53,6 @@ module.exports.datastores = {
 
     adapter: 'sails-mongo',
     url: 'mongodb://127.0.0.1:27017/mapprdb',
-    //url: dbloc,
 
   },
 
