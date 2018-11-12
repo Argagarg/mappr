@@ -1,3 +1,13 @@
-<div id="rooms" class="col-md-8">
-<h1>This is the room collection</h1>
+<div class='container col-md-8'>
+    <%Room.forEach(function(Room){ %>
+        <div class='room'>
+            <div class='pillheader'>
+                <i class='fas fa-map-marker'></i>
+                <p>Dungeon Name: <%= Room.roomname  %></p>
+            </div>
+            <div class='roomdata'>
+                <p><%= Room.creatornotes %></p>
+            </div>
+        </div>
+   <% }) %>
 </div>

@@ -4,7 +4,7 @@
     <div class="upload-form">
       <p class="text-center">Let's upload a room! Thanks for adding to the mappr dba.</p>
       <hr />
-      <ajax-form action="upload" :syncing.sync="syncing" :cloud-error.sync="cloudError" @submitted="submittedForm()"
+      <ajax-form action="upload" enctype="multipart/form-data" :syncing.sync="syncing" :cloud-error.sync="cloudError" @submitted="submittedForm()"
         :handle-parsing="handleParsingForm">
         <div class="form-group">
           <label for="author-name">Author Name</label>
@@ -15,7 +15,7 @@
         <div class="form-group">
           <label for="room-name">Room Name</label>
           <input class="form-control" id="room-name" type="text" :class="[formErrors.roomname ? 'is-invalid' : '']"
-            v-model.trim="formData.roomname" placeholder="sturgeon@example.com">
+            v-model.trim="formData.roomname" placeholder="a name for your room">
           <div class="invalid-feedback" v-if="formErrors.roomname">Please enter a valid room name.</div>
         </div>
         <div class="form-group">
@@ -27,8 +27,14 @@
         <div class="form-group">
           <label for="creator-notes">Creator Notes</label>
           <input class="form-control" id="creator-notes" type="text" :class="[formErrors.creatornotes ? 'is-invalid' : '']"
-            v-model.trim="formData.creatornotes" placeholder="••••••••" autocomplete="new-password">
+            v-model.trim="formData.creatornotes" placeholder="notes">
           <div class="invalid-feedback" v-if="formErrors.creatornotes">Please enter valid creator notes</div>
+        </div>
+        <div class="form-group">
+          <label for="image">Your Map</label>
+          <input class="form-control" id="image" type="file" :class="[formErrors.image ? 'is-invalid' : '']"
+            v-model.trim="formData.image" >
+          <div class="invalid-feedback" v-if="formErrors.image">Please select a valid image file</div>
         </div>
         <div class="form-group form-check">
           <input class="form-check-input" id="terms-agreement" type="checkbox" v-model="formData.agreed">

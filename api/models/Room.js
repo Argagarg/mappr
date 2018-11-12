@@ -54,6 +54,11 @@ module.exports = {
       example: 'this room demonstrates John Searles famous thought experiment'
     },
 
+    img: {
+      required: false,
+      type: 'string'
+    }
+
 
 
   },

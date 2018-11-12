@@ -1,24 +1,41 @@
-module.exports = async function add(req, res) {
+module.exports = async function upload(req, res) {
   var author = req.body.author;
   var room = req.body.room;
   var tags = req.body.tags;
   var notes = req.body.notes;
+  const uuidv4= require('uuid/v4');
+  var genuuid = uuidv4();
+  var inputFileName = req.file('image')._files[0]["stream"]["filename"];
+  var outputFileName=genuuid + inputFileName;
 
-  Room.create({
+  req.file('image').upload({
+    maxBytes: 10000000,
+    saveAs: outputFileName
+  }, function whenDone(err, uploadedFiles){
+    if(err) return res.serverError(err);
+    if(uploadedFiles.length===0)return res.badRequest('No file was uploaded');  
+    Room.create({
       authorname: author,
-      roomname: room
+      roomname: room,
+      tags: tags,
+      creatornotes: notes,
+      img: outputFileName
     })
     .exec(function (err) {
       if (err) {
         res.send(500, {
           error: 'database error'
         });
-        //res.redirect('500');
+        res.redirect('500');
       } else {
         res.redirect('/room');
       }
     });
+  });
 }
+
+
+
 /*
 module.exports = {
   
