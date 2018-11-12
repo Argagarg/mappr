@@ -7,10 +7,12 @@ module.exports = async function upload(req, res) {
   var genuuid = uuidv4();
   var inputFileName = req.file('image')._files[0]["stream"]["filename"];
   var outputFileName=genuuid + inputFileName;
+  var baseUrl = sails.config.custom.baseUrl;
 
   req.file('image').upload({
     maxBytes: 10000000,
-    saveAs: outputFileName
+    saveAs: outputFileName,
+    dirname: require('path').resolve(sails.config.appPath, 'assets/uploads')
   }, function whenDone(err, uploadedFiles){
     if(err) return res.serverError(err);
     if(uploadedFiles.length===0)return res.badRequest('No file was uploaded');  

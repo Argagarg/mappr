@@ -1100,11 +1100,44 @@ body {
   margin: 50px;
   background-color: #F0F0F0;
 }
+.room .roomrow {
+  text-align: center;
+}
+.room .roomrow p {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+.room .roomrow p:first-child {
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+.room .roomrow p:last-child {
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+}
 .pillheader {
   background-color: #5C0000;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   color: #fff;
+}
+.pillheader i {
+  padding: 4px;
+}
+.pillheader i:first-child {
+  float: left;
+  padding-left: 15px;
+}
+.pillheader i:last-child {
+  float: right;
+  padding-right: 15px;
+}
+.pillheader span {
+  padding-left: 25px;
 }
 #parent {
   /*position:absolute; 
