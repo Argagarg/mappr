@@ -31,7 +31,8 @@
         <div class="navbar-nav flex-row">
           <!-- LOGGED-IN NAVIGATION -->
           <% if(me) { %>
-          <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/contact">Help</a>
+          <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/add">Add</a>
+          <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/list">Search</a>
           <!-- Only in desktop nav -->
           <div class="nav-item dropdown d-none d-sm-block">
             <a class="nav-link dropdown-toggle" id="header-account-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
@@ -45,7 +46,8 @@
           <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/logout">Sign out</a>
           <% } else { %>
           <!-- LOGGED-OUT NAVIGATION -->
-          <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/faq">FAQ</a>
+          <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/add">Add</a>
+          <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/list">Search</a>
           <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/login">Log in</a>
           <!-- Only in desktop nav -->
           <div class="form-inline d-none ml-2 d-md-block" >

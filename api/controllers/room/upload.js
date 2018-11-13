@@ -12,7 +12,7 @@ module.exports = async function upload(req, res) {
   req.file('image').upload({
     maxBytes: 10000000,
     saveAs: outputFileName,
-    dirname: require('path').resolve(sails.config.appPath, 'assets/uploads')
+    dirname: require('path').resolve(sails.config.appPath, '.tmp/public/uploads')
   }, function whenDone(err, uploadedFiles){
     if(err) return res.serverError(err);
     if(uploadedFiles.length===0)return res.badRequest('No file was uploaded');  

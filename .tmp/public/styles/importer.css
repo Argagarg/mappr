@@ -1058,8 +1058,8 @@ body {
   }
 }
 #sidebar {
-  /*background-color: @background;
-    position:absolute;
+  background-color: #AAAAAA;
+  /*position:absolute;
     left:0px;
     top:0px;
     bottom:0px;
@@ -1072,11 +1072,12 @@ body {
   }
 }
 #searchtab {
+  background-color: #F0F0F0;
   /*position: absolute;
   width: 100%;
   top: 50px;
   bottom: 0px;
-  background-color: @backgroundlight;
+  
   */
 }
 #searchtab .upload-form {
@@ -1118,6 +1119,9 @@ body {
   float: right;
   margin-left: 0;
   margin-right: 0;
+}
+.mapdisplay {
+  width: inherit;
 }
 .pillheader {
   background-color: #5C0000;
