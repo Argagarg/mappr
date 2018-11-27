@@ -3,11 +3,13 @@ module.exports = async function upload(req, res) {
   var room = req.body.room;
   var tags = req.body.tags;
   var notes = req.body.notes;
+  var dimx  = req.body.dimx;
+  var dimy = req.body.dimy;
+  var dimt = req.body.dimt;
   const uuidv4= require('uuid/v4');
   var genuuid = uuidv4();
   var inputFileName = req.file('image')._files[0]["stream"]["filename"];
   var outputFileName=genuuid + inputFileName;
-  var baseUrl = sails.config.custom.baseUrl;
 
   req.file('image').upload({
     maxBytes: 10000000,
@@ -21,7 +23,10 @@ module.exports = async function upload(req, res) {
       roomname: room,
       tags: tags,
       creatornotes: notes,
-      img: outputFileName
+      img: outputFileName,
+      dimx: dimx,
+      dimy: dimy,
+      dimt: dimt
     })
     .exec(function (err) {
       if (err) {

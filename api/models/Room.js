@@ -55,12 +55,28 @@ module.exports = {
     },
 
     img: {
+      required: true,
+      type: 'string',
+      description: 'the back-end filename for the room'
+    },
+
+    dimx: {
+      type: 'number',
       required: false,
-      type: 'string'
+      description: 'the width of the map'
+    },
+
+    dimy: {
+      type: 'number',
+      required: false,
+      description: 'the height of the map'
+    },
+
+    dimt: {
+      type: 'string',
+      required: false,
+      description: 'the unit type for the map dims'
     }
-
-
-
   },
 
   datastore: 'mongodb'
