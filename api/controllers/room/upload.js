@@ -3,41 +3,43 @@ module.exports = async function upload(req, res) {
   var room = req.body.room;
   var tags = req.body.tags;
   var notes = req.body.notes;
-  var dimx  = req.body.dimx;
+  var dimx = req.body.dimx;
   var dimy = req.body.dimy;
   var dimt = req.body.dimt;
-  const uuidv4= require('uuid/v4');
+  const uuidv4 = require('uuid/v4');
   var genuuid = uuidv4();
   var inputFileName = req.file('image')._files[0]["stream"]["filename"];
-  var outputFileName=genuuid + inputFileName;
+  var outputFileName = genuuid + inputFileName;
 
   req.file('image').upload({
     maxBytes: 10000000,
     saveAs: outputFileName,
     dirname: require('path').resolve(sails.config.appPath, '.tmp/public/uploads')
-  }, function whenDone(err, uploadedFiles){
-    if(err) return res.serverError(err);
-    if(uploadedFiles.length===0)return res.badRequest('No file was uploaded');  
-    Room.create({
-      authorname: author,
-      roomname: room,
-      tags: tags,
-      creatornotes: notes,
-      img: outputFileName,
-      dimx: dimx,
-      dimy: dimy,
-      dimt: dimt
-    })
-    .exec(function (err) {
-      if (err) {
-        res.send(500, {
-          error: 'database error'
+  }, function whenDone(err, uploadedFiles) {
+    if (err) return res.serverError(err);
+    else if (uploadedFiles.length === 0) return res.badRequest('No file was uploaded');
+    else {
+      Room.create({
+          authorname: author,
+          roomname: room,
+          tags: tags,
+          creatornotes: notes,
+          img: outputFileName,
+          dimx: dimx,
+          dimy: dimy,
+          dimt: dimt
+        })
+        .exec(function (err) {
+          if (err) {
+            res.send(500, {
+              error: 'database error'
+            });
+            //res.redirect('500');
+          } else {
+            res.redirect('/room');
+          }
         });
-        res.redirect('500');
-      } else {
-        res.redirect('/room');
-      }
-    });
+    }
   });
 }
 

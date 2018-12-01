@@ -1,4 +1,6 @@
 <div id='parent' class='row'>
-    <%- partial('partials/sidebar.ejs') %>
-    <%- partial('partials/rooms.ejs', {Room: Room}) %>
+  <%- partial('partials/sidebar.ejs') %>
+  <%- partial('partials/rooms.ejs', {Room: Room}) %>
 </div>
+
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
