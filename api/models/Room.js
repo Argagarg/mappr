@@ -76,7 +76,19 @@ module.exports = {
       type: 'string',
       required: false,
       description: 'the unit type for the map dims'
+    },
+
+    aspratio: {
+      type: 'number',
+      required: false,
+      description: 'The aspect ratio for the map (width / height)'
+    },
+
+    owner: {
+      model: 'user'
     }
+
+
   },
 
   datastore: 'mongodb'

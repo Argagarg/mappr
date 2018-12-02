@@ -19,6 +19,7 @@ module.exports = async function upload(req, res) {
     if (err) return res.serverError(err);
     else if (uploadedFiles.length === 0) return res.badRequest('No file was uploaded');
     else {
+      var aspratio = dimx / dimy;
       Room.create({
           authorname: author,
           roomname: room,
@@ -27,16 +28,17 @@ module.exports = async function upload(req, res) {
           img: outputFileName,
           dimx: dimx,
           dimy: dimy,
-          dimt: dimt
+          dimt: dimt,
+          aspratio: aspratio,
+          owner: req.user.id
         })
         .exec(function (err) {
           if (err) {
-            res.send(500, {
+            res.status(500).send({
               error: 'database error'
             });
-            //res.redirect('500');
           } else {
-            res.redirect('/room');
+            res.redirect('/thanks');
           }
         });
     }

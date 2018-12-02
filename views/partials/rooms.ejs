@@ -13,7 +13,7 @@
           <%= Room.authorname %>
         </p>
         <p>Dimensions:
-          <%= Room.authorname %>
+          <%= Room.dimx + " x " + Room.dimy + " " + Room.dimt %>
         </p>
         <p>Date uploaded:
           <%= Room.createdAt %>
@@ -21,7 +21,7 @@
       </div>
       <div class='row'>
         <div class='col-md-8'>
-          <% var temp =  "uploads/" + Room.img %>
+          <% var temp =  "../uploads/" + Room.img %>
           <img src='<%= temp %>' class='mapdisplay'>
         </div>
         <div class='col-md-4'>
@@ -29,6 +29,9 @@
             <%= Room.creatornotes %>
           </p>
         </div>
+      </div>
+      <div class='row'>
+        <%= Room.tags %>
       </div>
 
     </div>

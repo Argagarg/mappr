@@ -169,6 +169,9 @@ body {
   height: 100%;
   margin: 0;
 }
+body {
+  padding-top: 61px;
+}
 #page-wrap {
   height: 100%;
   height: auto !important;
@@ -1059,20 +1062,22 @@ body {
 }
 #sidebar {
   background-color: #AAAAAA;
+  padding-right: 0px;
   /*position:absolute;
     left:0px;
     top:0px;
     bottom:0px;
     padding-left: 0px;
-    padding-right: 0px;*/
+    */
 }
 @media (max-width: 500px) {
   #sidebar code {
     word-break: break-all;
   }
 }
-#searchtab {
-  background-color: #F0F0F0;
+.tab-pane {
+  padding-left: 1em;
+  padding-right: 1em;
   /*position: absolute;
   width: 100%;
   top: 50px;
@@ -1080,7 +1085,7 @@ body {
   
   */
 }
-#searchtab .upload-form {
+.tab-pane .upload-form {
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -1088,6 +1093,12 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   font-weight: bold;
+}
+.tab-content {
+  background-color: #F0F0F0;
+}
+.sticky-offset {
+  top: 56px;
 }
 #rooms {
   /*position:absolute; 
@@ -1114,11 +1125,17 @@ body {
   float: left;
   margin-left: 0;
   margin-right: 0;
+  padding-left: 1em;
 }
 .room .roomrow p:last-child {
   float: right;
   margin-left: 0;
   margin-right: 0;
+  padding-right: 1em;
+}
+.room img {
+  padding-left: 1em;
+  padding-bottom: 1em;
 }
 .mapdisplay {
   width: inherit;

@@ -1,11 +1,12 @@
 #sidebar {
     background-color: @background;
+    padding-right: 0px;
     /*position:absolute;
     left:0px;
     top:0px;
     bottom:0px;
     padding-left: 0px;
-    padding-right: 0px;*/
+    */
 
 
   @media (max-width: 500px) {
@@ -16,8 +17,9 @@
 }
 
 
-#searchtab {
-  background-color: @backgroundlight;
+.tab-pane {
+  padding-left: 1em;
+  padding-right: 1em;
   /*position: absolute;
   width: 100%;
   top: 50px;
@@ -35,4 +37,12 @@
   padding-left: 30px;
   padding-right: 30px;
   font-weight: bold;
+}
+
+.tab-content{
+  background-color: @backgroundlight;
+}
+
+.sticky-offset{
+  top: 56px;
 }

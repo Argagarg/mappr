@@ -1,8 +1,38 @@
 module.exports = async function list(req, res) {
   var query = {};
-    if(req.param('roomname')){
-      query = { roomname: req.param('roomname')};
+    if(req.param('roomname')) query.roomname=req.param('roomname');
+    if(req.param('authorname')) query.roomname=req.param('authorname');
+    if(req.param('tags')){
+      var inputtags = req.param('tags').split(",");
+      query.or = [];
+      inputtags.forEach(element => {
+        var temp = {};
+        temp.tags = {};
+        temp.tags.contains = element;
+        query.or.push(temp);
+      });
+
     }
+    if(req.param('unitmatch')===1) query.dimt=req.param('widthunits');
+    if(req.param('scaling')===0) {
+      if(req.param('minwidth') && !req.param('maxwidth')){
+        query.dimx= { '>=': req.param('minwidth') };
+      }else if(!req.param('minwidth') && req.param('maxwidth')){
+        query.dimx= { '<=': req.param('maxwidth') };
+      }else if(req.param('minwidth') && req.param('maxwidth')){
+        query.dimx= { '>=': req.param('minwidth'), '<=': req.param('maxwidth') }
+      }
+      if(req.param('minheight') && !req.param('maxheight')){
+        query.dimy= { '>=': req.param('minheight') };
+      }else if(!req.param('minheight') && req.param('maxheight')){
+        query.dimy= { '<=': req.param('maxheight') };
+      }else if(req.param('minheight') && req.param('maxheight')){
+        query.dimy= { '>=': req.param('minheight'), '<=': req.param('maxheight') }
+      }
+    } else{
+
+    }
+
     
 
 
