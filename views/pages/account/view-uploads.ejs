@@ -1,0 +1,43 @@
+<div id='account-pill' class='row'>
+  <div class='container'>
+    <h1>My Contributions</h1>
+    <hr>
+    <%Room.forEach(function(Room){ %>
+    <div class='room'>
+      <div class='pillheader'>
+        <i class='fa fa-map-marker'></i>
+        <span>Dungeon Name:
+          <%= Room.roomname  %></span>
+        <i class='fa fa-minus text-right'></i>
+      </div>
+      <div class='roomdata'>
+        <div class='roomrow'>
+          <p>Author:
+            <%= Room.authorname %>
+          </p>
+          <p>Dimensions:
+            <%= Room.dimx + " x " + Room.dimy + " " + Room.dimt %>
+          </p>
+          <p>Date uploaded:
+            <%= Room.createdAt %>
+          </p>
+        </div>
+        <div class='roomrow row'>
+          <div class='col-md-8'>
+            <% var temp =  "../uploads/" + Room.img %>
+            <img src='<%= temp %>' class='mapdisplay'>
+          </div>
+          <div class='col-md-4'>
+            <p>
+              <%= Room.creatornotes %>
+            </p>
+            <p>Tags:
+                <%= Room.tags %>
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>

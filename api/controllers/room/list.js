@@ -32,16 +32,6 @@ module.exports = async function list(req, res) {
     } else{
 
     }
-
-    
-
-
-  /*
-  if(!req.body.hasOwnProperty(roomname)){
-    
-  }else{
-    var query = { roomname: req.body.roomname};
-  }*/
     Room.find(query).exec(function (err, Room) {
       if (err) {
         res.send(500, {

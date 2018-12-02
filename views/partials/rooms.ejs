@@ -19,7 +19,7 @@
           <%= Room.createdAt %>
         </p>
       </div>
-      <div class='row'>
+      <div class='roomrow row'>
         <div class='col-md-8'>
           <% var temp =  "../uploads/" + Room.img %>
           <img src='<%= temp %>' class='mapdisplay'>
@@ -28,12 +28,11 @@
           <p>
             <%= Room.creatornotes %>
           </p>
+          <p>Tags:
+            <%= Room.tags %>
+          </p>
         </div>
       </div>
-      <div class='row'>
-        <%= Room.tags %>
-      </div>
-
     </div>
   </div>
   <% }) %>
