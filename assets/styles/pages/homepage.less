@@ -2,6 +2,7 @@
   a:not(.btn) {
     color: @brand;
     border-bottom: 1px solid @text-normal;
+
     &:hover {
       text-decoration: none;
       color: @text-normal;
@@ -13,50 +14,60 @@
     padding-bottom: 25px;
     color: @brand;
     position: relative;
+
     .hero-image {
       width: 220px;
       height: 170px;
       margin-left: auto;
       margin-right: auto;
       position: relative;
+
       img {
         position: absolute;
       }
+
       .sky {
         width: 170px;
         left: 25px;
         top: 25px;
       }
+
       .cloud {
         .fly-fade();
         width: 80px;
+
         &.cloud-1 {
           top: 55px;
           left: -40px;
           opacity: 0;
           .animation-delay(3.5s);
         }
+
         &.cloud-2 {
           top: 45px;
           left: -40px;
           opacity: 0;
         }
       }
+
       .ship {
         .skid();
         width: 160px;
         bottom: 50px;
         left: 18px;
       }
+
       .water {
         width: 170px;
         bottom: 40px;
         left: 25px;
       }
     }
+
     h1 {
       padding-bottom: 50px;
     }
+
     .more-info-text {
       .bob();
       cursor: pointer;
@@ -65,12 +76,14 @@
       width: 100%;
       bottom: 25px;
       left: 0px;
+
       .text {
         font-size: 16px;
         text-transform: uppercase;
         letter-spacing: 2px;
         font-weight: 700;
       }
+
       .icon {
         font-size: 20px;
       }
@@ -78,19 +91,23 @@
   }
 
   .about-wrapper {
-    background-color: #eef5f9b8;
+    background-color: @backgroundlight;
+
     .about {
       padding-top: 75px;
       padding-bottom: 50px;
+
       p {
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
       }
     }
+
     .features {
       padding-top: 25px;
       padding-bottom: 100px;
+
       .feature {
         .icon {
           background-color: @brand;
@@ -112,16 +129,19 @@
 
   .setup {
     padding-top: 75px;
+
     .step {
       margin-top: 75px;
       margin-bottom: 75px;
       padding-left: 240px;
       position: relative;
+
       .step-image {
         position: absolute;
         left: 0px;
         top: 0px;
         width: 140px;
+
         img {
           width: 100%;
         }
@@ -132,11 +152,13 @@
   .pep-talk {
     padding-top: 50px;
     padding-bottom: 100px;
+
     p {
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
     }
+
     a {
       border-bottom: none;
     }
@@ -144,7 +166,12 @@
 
   &.uninitialized {
     height: 100%;
-    .hero, .about, .features, .setup, .pep-talk {
+
+    .hero,
+    .about,
+    .features,
+    .setup,
+    .pep-talk {
       opacity: 0;
     }
   }
@@ -153,22 +180,26 @@
     .setup {
       .step {
         padding-left: 0px;
+
         .step-image {
           display: none;
         }
       }
     }
   }
+
   @media (max-width: 450px) {
     .hero {
       padding-top: 50px;
-        h1.display-4 {
+
+      h1.display-4 {
         font-size: 34px;
       }
     }
   }
 }
- /* NOTE: ADDED MATERIAL */
+
+/* NOTE: ADDED MATERIAL */
 .top {
   z-index: 50;
   text-align: center;
@@ -178,6 +209,38 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 400px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.middle {
+  z-index: 50;
+  text-align: center;
+  color: white;
+  background: url(../images/upload.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.bottom {
+  z-index: 50;
+  text-align: center;
+  color: white;
+  background: url(../images/play.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 600px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -205,4 +268,12 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.container .row h4, .container .row h3 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }

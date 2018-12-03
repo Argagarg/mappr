@@ -1,5 +1,6 @@
 <div id="sidebar" class='col-md-4 sidebar-expanded d-none d-md-block'>
   <div class='sticky-top sticky-offset'>
+    <!--
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
@@ -13,12 +14,13 @@
         <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
           aria-selected="false">Save</a>
       </li>
-    </ul>
+    </ul>-->
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <form method='get' action="/list">
           <div class="form-group">
-            <p>Search for a room or dungeon by room name:</p>
+            <h4>Search for a dungon:</h4>
+            <p>Search by dungeon name:</p>
             <label for="room-name" class='sr-only'>Search for a room or dungeon by:</label>
             <input name='roomname' class="form-control" id="room-name" type="text" focus-first>
           </div>
@@ -31,7 +33,7 @@
             <p>Search by size:</p>
             <div class='input-group'>
               <label for="room-min-width" class='sr-only'>Min Width</label>
-              Width: <input name='minwidth' class="form-control" id="room-min-width" type="number" placeholder="0">
+              X: &nbsp;<input name='minwidth' class="form-control" id="room-min-width" type="number" placeholder="0">
               <div class='spacing'>&ndash;</div>
               <label for="room-max-width" class='sr-only'>Max Width</label>
               <input name='maxwidth' class="form-control" id="room-max-width" type="number" placeholder="100">
@@ -47,7 +49,7 @@
           <div class="form-group">
             <div class='input-group'>
               <label for="room-min-height" class='sr-only'>Min Height</label>
-              Height: <input name='minheight' class="form-control" id="room-min-height" type="number" placeholder="0">
+              Y: &nbsp;<input name='minheight' class="form-control" id="room-min-height" type="number" placeholder="0">
               <p class='spacing'>&ndash;</p>
               <label for="room-max-height" class='sr-only'>Max Height</label>
               <input name='maxheight' class="form-control" id="room-max-height" type="number" placeholder="100">
@@ -67,10 +69,10 @@
           </div>
           <div class="form-group" style="width:32%; display: inline-block;">
             <div class='input-group'>
-              <div class="checkbox">
-                <label>
+             <div class="checkbox">
+                 <!--<label>
                   <input name='scaling' type="checkbox">Allow Scaling?
-                </label>
+                </label>-->
                 <label>
                     <input name ='unitmatch' type="checkbox">Match units?
                   </label>

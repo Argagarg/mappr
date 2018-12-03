@@ -30,85 +30,92 @@
   <div class="about-wrapper" role="scroll-destination">
     <div class="container">
       <div class="about text-center">
-        <h3>Description</h3>
+        <h3>Create. Share. Play!</h3>
+        <p>Welcome to MAPPR, the Map Aggregator for Positive and Performant Roleplaying. MAPPR is the world's #1
+          web-based tabletop RPG map and dungeon aggregator tool on the market. <strong>Sign Up</strong> and start
+          today!</p>
       </div>
-      <div class="features">
-        <div class="row">
-          <p>
-            MAPPR exists to fill a conceptual and logistical gap in tabletop roleplaying. MAPPR exists to provide a
-            tool that will help tabletop gamers build and share maps for
-            use in their games. In particular, the site should allow users to:</p>
-          <ol>
-            <li>Build Dungeons: Users should be able to select Rooms, place them on a map, and then export the result
-              as an image file.</li>
-            <li>Share Dungeons and Rooms: Users should be able to upload maps they've assembled as well as room
-              components. The site should support a sufficiently robust tagging system so that users can search and
-              filter rooms that have been uploaded.</li>
-          </ol>
-          <p>The successful inclusion of these features will qualify the site as a success, but the site also has a few
-            stretch goals:</p>
-          <ol>
-            <li>Build Rooms: Users should be able to assemble Rooms from Elements.</li>
-            <li>Build Encounters: Users should be able to assign traps, monsters, and other features to rooms, creating
-              Encounters attached to specific rooms.</li>
-            <li>Skin Dungeons: This means that Elements, Rooms, and Encounters should be mechanically and artistically
-              linked via tags to semantic content, allowing the user to change them on-the-fly. Ex: A room with
-              table, chairs, solid walls, and weapon rack can be tagged with the [Fantasy] art tag, which turns these
-              into a wooden table & chairs, stone walls, and medieval sword rack. Applying the [SF] tag will default
-              it to metal walls, futuristic chairs, and a firearm weapon rack.</li>
-            <li>Generate Dungeons: Given a set of Rooms, the tool will use a generative algorithm to create a dungeon
-              layout. There's existing research that compares building design & layout to the sort of algorithms that
-              have been used to map plant growth, for example--I'd look into that work and use some similar algorithm</li>
-          </ol>
-          <p>The anticipated audience for this site is the tabletop gaming community. As part of the greater effort
-            towards inclusivity and diversity in gaming, I hope to aim this site towards the wider community and make
-            its features easy-to-use and accessible. New DMs and those just entering the hobby should be able to
-            immediately access MAPPR and be able to use it to generate content</p>
+      <div class="features container" >
+        <div class='row' data-aos="fade-up" data-aos-anchor-placement="top-center">
+          <h3>How it works:</h3>
         </div>
-        <a class="btn btn-outline-info mt-5" href="/faq">Learn more</a>
+        <div class="row" data-aos="fade-up" data-aos-anchor-placement="top-center">
+          <h4>1. Create your maps</h4>
+          <p>Gamemasters and players the world over make maps. A lot of maps. Whether you're
+            sketching out your overworld or preparing a precise dungeon layout, maps are key.</p>
+          <div class='col'>
+            <img src='images/map.jpg' class='mapdisplay'>
+            <p class='text-muted'>Use MAPPR for overworld maps</p>
+          </div>
+          <div class='col'>
+            <img src='images/dungeon.jpg' class='mapdisplay'>
+            <p class='text-muted'>...and for dungeons/rooms</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="about text-center">
-      <h3>Description</h3>
+
+  <div class="middle hero d-flex flex-column justify-content-center">
+  </div>
+  <div class="container" data-aos="fade-up" data-aos-anchor-placement="top-center">
+    <div class='row'>
+      <h4>2. Upload them to MAPPR</h4>
     </div>
-    <div class='features'>
+    <div class='row'>
+      <div class='col'><img src='images/uploadcap.png' class='mapdisplay'></div>
+    </div>
+    <div class='row'>
+      <p class='text-muted'>The agile and responsive MAPPR system is an excellent repository for your creative works</p>
+    </div>
+  </div>
+  <div class="bottom hero d-flex flex-column justify-content-center">
+  </div>
+  <div class="container" data-aos="fade-up" data-aos-anchor-placement="top-center">
+    <div class='row'>
+      <h4>3. Share, Collaborate, and Play</h4>
+    </div>
+    <div class='row'>
+      <div class='col'><img src='images/r20.jpg' class='mapdisplay'></div>
+    </div>
+    <div class='row'>
+      <p class='text-muted'>Import MAPPR maps into your favorite collaborative gaming tool or print them out and use them in person.</p>
+    </div>
+  </div>
+<hr>
+<div class='container'>
+    <div class='row'>
+        <h4>Support MAPPR</h4>
+        <p>The following super-cool people have backed the MAPPR project, contributing funds towards the creation of the world's best map repository. Join them!</p>
+      </div>
       <div class='row'>
-        <p>The base stage of my site will require users to do the following:</p>
-        <ol>
-          <li>Upload rooms: Users can upload an image file and tag it with several desired attributes: <ol>
-              <li>Room Name [textbox]</li>
-              <li>Room Author [textbox]</li>
-              <li>Dimensions [numeric] & Units [optgroup]</li>
-              <li>Art and System Tags [text box]</li>
-              <li>Identify entrances and exits to their uploaded room when the room is laid out on a grid [web
-                API interaction]</li>
-              <li>Room notes [text area]</li>
-            </ol>
-          </li>
-          <li>Search and filter the uploaded rooms: users can parse through the extant database of rooms and use them
-            to assemble a dungeon:<ol>
-              <li>Tag search [textbox]</li>
-              <li>Name search[textbox]</li>
-              <li>Dimension constraint search (min,max, units) [numeric, numeric, opt]</li>
-              <li>#Room entrances & exits(positions)[checkbox for N,S,E,W]</li>
-              <li>Checkbox for allowing room flipping [checkbox]</li>
-              <li>Checkbox for allowing room scaling (min, max) [numerics]</li>
-            </ol>
-          </li>
-          <li>Assemble a dungeon from a set of rooms<ul>
-              <li>Author Name [textbox]</li>
-              <li>Author notes (overall)[textarea]</li>
-              <li>Author notes (per room)[textarea]</li>
-              <li>Area for creator notes on the contents / design of the dungeon[text area]</li>
-            </ul>
-          </li>
-        </ol>
-        <p>The stretch goal functionality would allow the users to do all the things listed in the above stretch goals,
-          but would also necessitate the creation and management of user accounts.</p>
-      </div>
-    </div>
-  </div>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40" style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+          <figure><img src="images/backer.png" alt="backers" width="40" height="40"style='padding: 3px;'></figure>
+        </div>
+        <div class='row'>
+            <a class="btn btn-sm btn-outline-info account-settings-button" style='margin-left: auto; margin-right: auto;' href="http://kirklundblade.com/">Support MAPPR</a>
+        </div>
+</div>
 </div>
 <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>

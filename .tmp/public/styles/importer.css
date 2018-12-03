@@ -749,7 +749,7 @@ body {
   font-size: 20px;
 }
 #homepage .about-wrapper {
-  background-color: #eef5f9b8;
+  background-color: #F0F0F0;
 }
 #homepage .about-wrapper .about {
   padding-top: 75px;
@@ -848,6 +848,36 @@ body {
   width: 100%;
   position: relative;
 }
+.middle {
+  z-index: 50;
+  text-align: center;
+  color: white;
+  background: url(../images/upload.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.bottom {
+  z-index: 50;
+  text-align: center;
+  color: white;
+  background: url(../images/play.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
 #logobox {
   z-index: 50;
   text-align: center;
@@ -867,6 +897,14 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+.container .row h4,
+.container .row h3 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 #welcome {
   padding-top: 75px;
@@ -1061,8 +1099,9 @@ body {
   }
 }
 #sidebar {
-  background-color: #AAAAAA;
+  background-color: #F0F0F0;
   padding-right: 0px;
+  border-right: 2px solid #AAAAAA;
   /*position:absolute;
     left:0px;
     top:0px;
@@ -1098,7 +1137,10 @@ body {
   background-color: #F0F0F0;
 }
 .sticky-offset {
-  top: 56px;
+  top: 61px;
+}
+.form-group h4 {
+  padding-top: 20px;
 }
 #rooms {
   /*position:absolute; 
@@ -1167,4 +1209,7 @@ body {
 .room .roomrow {
   margin-left: 0px;
   margin-right: 0px;
+}
+#parent {
+  margin-bottom: -61px;
 }

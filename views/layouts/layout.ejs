@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="/dependencies/bootstrap-4/bootstrap-4.css">
   <link rel="stylesheet" href="/dependencies/font-awesome-4/css/font-awesome.css">
   <link rel="stylesheet" href="/styles/importer.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!--STYLES END-->
 </head>
 
@@ -49,8 +50,6 @@
         <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/logout">Sign out</a>
         <% } else { %>
         <!-- LOGGED-OUT NAVIGATION -->
-        <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/add">Add</a>
-        <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/list">Search</a>
         <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/login">Log in</a>
         <!-- Only in desktop nav -->
         <div class="form-inline d-none ml-2 d-md-block">
@@ -146,6 +145,10 @@
   <script src="/js/pages/homepage.page.js"></script>
   <script src="/js/pages/legal/privacy.page.js"></script>
   <script src="/js/pages/legal/terms.page.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <!--SCRIPTS END-->
 </body>
 
